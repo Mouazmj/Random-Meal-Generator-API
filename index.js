@@ -12,7 +12,7 @@ submit.addEventListener('click', () => {
         container.innerHTML = `
         <h2>${meal.strMeal}</h2>
         <img src="${meal.strMealThumb}" alt="The meal picture">
-        <p>${meal.strInstructions}</p>
+        <p id="instructions">${meal.strInstructions}</p>
         `
 
         const ul = document.createElement('ul')
