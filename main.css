@@ -12,7 +12,7 @@ body {
     padding: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #222222;
-    background-color: #fff8f0; /* lätt “matig” bakgrund */
+    background-color: #ffa952; /* lätt “matig” bakgrund */
 }
 
 /* Knappen */
@@ -24,13 +24,13 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    background-color: #ffbb33;
-    color: #222;
+    background-color: #4CAF50;
+    color: #fff;
     transition: background 0.3s, transform 0.2s;
 }
 
 #generate-btn:hover {
-    background-color: #ffaa00;
+    background-color: #45a049;
     transform: scale(1.05);
 }
 
