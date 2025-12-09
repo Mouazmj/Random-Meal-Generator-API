@@ -13,6 +13,10 @@ submit.addEventListener('click', () => {
         <h2>${meal.strMeal}</h2>
         <img src="${meal.strMealThumb}" alt="The meal picture">
         <p id="instructions">${meal.strInstructions}</p>
+        <div class="cat-area">
+        <p><strong>Category: </strong>${meal.strCategory}</p>
+        <p><strong>Area: </strong>${meal.strArea}</p>
+        </div>
         `
 
         const ul = document.createElement('ul')
@@ -38,6 +42,7 @@ submit.addEventListener('click', () => {
 
     
         const ytLink = meal.strYoutube
+        if (ytLink) {
         const videoId = ytLink.split("v=")[1].split("&")[0]
         const iframe = document.createElement('iframe')
         iframe.src = `https://www.youtube.com/embed/${videoId}`
@@ -45,6 +50,7 @@ submit.addEventListener('click', () => {
         iframe.height = 315
         iframe.allowFullscreen = true
         container.appendChild(iframe)
+        }
         
         console.log(data)
     })
