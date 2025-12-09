@@ -13,21 +13,23 @@ submit.addEventListener('click', () => {
         <h2>${meal.strMeal}</h2>
         <img src="${meal.strMealThumb}" alt="The meal picture">
         <p>${meal.strInstructions}</p>
-        <li class="ingrediens-li">
-        
-        </li>
         `
-        
+
+        const ul = document.createElement('ul')
+        ul.classList.add('ingrediens-ul')
+        container.appendChild(ul)
+
         for (let i = 1; i <= 20; i++) {
          const ingredient = meal[`strIngredient${i}`]
          const measure = meal[`strMeasure${i}`]
 
          if (ingredient && ingredient.trim() !== '') {
             ingredients.push(`${measure.trim()} ${ingredient}`)
-            const ul = document.createElement('ul')
-            ul.innerText = ingredients[i]
-            const theList = document.querySelector('.ingrediens-li')
-            theList.appendChild(ul)
+
+            const li = document.createElement('li')
+            const theUl = document.querySelector('.ingrediens-ul')
+            theUl.appendChild(li)
+            li.innerText = `${measure.trim()} ${ingredient}`
          }
         }
 
