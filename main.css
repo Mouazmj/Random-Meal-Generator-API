@@ -1,3 +1,4 @@
+/* Global reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,60 +10,107 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #222222;
+    background-color: #fff8f0; /* lätt “matig” bakgrund */
 }
 
+/* Knappen */
 #generate-btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 20px;
     font-weight: bold;
     margin-top: 40px;
     cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffbb33;
+    color: #222;
+    transition: background 0.3s, transform 0.2s;
 }
 
-#main {
+#generate-btn:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
     margin-top: 30px;
-    font-family: sans-serif;
-    border-bottom: 1px solid black;
+    text-align: center;
 }
 
-img {
+/* Måltidens namn */
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Bild */
+.container img {
     width: 100%;
-    max-width: 200px;
+    max-width: 400px;
     height: auto;
     display: block;
     margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-family: sans-serif;
-}
-
+/* Instruktioner */
 #instructions {
-    font-family: sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 20px 0;
     padding: 0 20px;
-    text-align: center;
+    font-size: 1rem;
 }
 
+/* Ingrediens-lista */
+.ingrediens-ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 20px auto;
+    text-align: left;
+    max-width: 500px;
+}
 
+.ingrediens-ul h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* YouTube-video */
+.container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Media queries för tablet och desktop */
 @media (min-width: 768px) {
     #instructions {
-        padding: 0 100px;
+        padding: 0 50px;
+        font-size: 1.1rem;
     }
 
-    img {
-        max-width: 150px;
+    .ingrediens-ul {
+        max-width: 600px;
     }
 }
-
 
 @media (min-width: 1024px) {
     #instructions {
-        padding: 0 300px;
+        padding: 0 100px;
+        font-size: 1.2rem;
     }
 
-    img {
-        max-width: 200px;
+    .ingrediens-ul {
+        max-width: 650px;
     }
 }

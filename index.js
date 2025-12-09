@@ -18,6 +18,9 @@ submit.addEventListener('click', () => {
         const ul = document.createElement('ul')
         ul.classList.add('ingrediens-ul')
         container.appendChild(ul)
+        const h3 = document.createElement('h3')
+        h3.innerText = 'Ingredients:'
+        ul.appendChild(h3)
 
         for (let i = 1; i <= 20; i++) {
          const ingredient = meal[`strIngredient${i}`]
