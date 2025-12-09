@@ -33,6 +33,9 @@ submit.addEventListener('click', () => {
          }
         }
 
+        const iframe = document.createElement('iframe')
+        container.appendChild(iframe)
+        iframe.src = `${meal.strYoutube}`
         
         console.log(data)
     })
