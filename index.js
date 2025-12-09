@@ -33,9 +33,15 @@ submit.addEventListener('click', () => {
          }
         }
 
+    
+        const ytLink = meal.strYoutube
+        const videoId = ytLink.split("v=")[1].split("&")[0]
         const iframe = document.createElement('iframe')
+        iframe.src = `https://www.youtube.com/embed/${videoId}`
+        iframe.width = 560
+        iframe.height = 315
+        iframe.allowFullscreen = true
         container.appendChild(iframe)
-        iframe.src = `${meal.strYoutube}`
         
         console.log(data)
     })
